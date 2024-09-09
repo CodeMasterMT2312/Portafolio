@@ -1,0 +1,417 @@
+/* Estilos para el navbar */
+.navbar {
+    background-color: rgba(28, 28, 28, 0.8);
+    padding: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.navbar .navbar-brand {
+    color: #F05454;
+    font-weight: bold;
+}
+
+.navbar .nav-link {
+    color: #E0E0E0;
+    margin-right: 10px;
+}
+
+.navbar .nav-link:hover {
+    color: #F05454;
+}
+
+.navbar-toggler {
+    background-color: #E0E0E0;
+}
+
+.navbar-nav .nav-link {
+    color: #E0E0E0;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #F05454;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 5px;
+    }
+}
+
+/* Estilos para los botones de traducción */
+.translation-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 400px;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+
+.translation-buttons button {
+    background-color: #F05454;
+    color: #E0E0E0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.translation-buttons button:hover {
+    background-color: #30475E;
+    color: #E0E0E0;
+}
+
+/* Estilos para el header, imagen redonda y disposición compacta en fila */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #2C2C2C;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.img-profile {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.text-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 0;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.social-button {
+    border: 2px solid #F05454;
+    border-radius: 5px;
+    padding: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2C2C2C;
+    text-align: center;
+}
+
+.social-button a {
+    text-decoration: none;
+    color: #E0E0E0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.social-button img {
+    width: 40px;
+    height: 40px;
+    transition: filter 0.3s;
+}
+
+.social-button:hover {
+    background-color: #F05454;
+    border-color: #F05454;
+}
+
+.social-button:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.social-button:hover a {
+    color: #E0E0E0;
+}
+
+.frontEnd img, 
+.BDD img, 
+.PrograLang img {
+    height: 60px;
+    width: 60px;
+    margin: 5px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-profile {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 15px;
+    }
+
+    .text-profile {
+        text-align: center;
+    }
+}
+
+
+/* Otros estilos generales */
+body {
+    background-color: #1A1A1A;
+    color: #E0E0E0;
+}
+
+h1, h2 {
+    color: #F05454;
+}
+
+button {
+    background-color: #F05454;
+    color: #E0E0E0;
+    border: none;
+    padding: 10px 20px;
+}
+
+button:hover {
+    background-color: #30475E;
+}
+
+/* Estilos para centrar y compactar las secciones About y Contact */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+main section {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #2C2C2C;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de encabezados y textos en las secciones */
+h3, h5 {
+    color: #F05454;
+    margin-bottom: 10px;
+}
+
+p, div {
+    color: #E0E0E0;
+    margin-bottom: 15px;
+}
+
+/* Estilos para la sección de proyectos */
+#Proyects {
+    padding: 20px;
+    background-color: #2C2C2C;
+}
+
+/* Estilos para el contenedor de las tarjetas */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Estilos para las tarjetas */
+.card {
+    width: 18rem;
+    background-color: #2C2C2C;
+    color: #E0E0E0;
+    border: 1px solid #30475E;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Estilos para la imagen de la tarjeta */
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Estilos para el cuerpo de la tarjeta */
+.card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para el título de la tarjeta */
+.card-title {
+    color: #F05454;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el texto de la tarjeta */
+.card-text {
+    color: #E0E0E0;
+    margin-bottom: 5px;
+}
+
+/* Estilos para las tecnologías */
+.card-body .card-text {
+    display: inline;
+    margin-right: 10px;
+}
+
+.card-body .card-text:first-child {
+    margin-left: 0;
+}
+.techText {
+    font-weight: bold;
+    color: #F05454;
+}
+
+.tech {
+    display: flex;
+}
+
+/* Estilos para el botón */
+.btn-primary {
+    background-color: #F05454;
+    border-color: #F05454;
+}
+
+.btn-primary:hover {
+    background-color: #30475E;
+    border-color: #30475E;
+}
+
+/* Ajustes responsivos para las tarjetas */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px; /* Ajusta el ancho máximo de las tarjetas en pantallas pequeñas */
+    }
+}
+
+/* Estilos compactos para las tarjetas en dispositivos más pequeños */
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+/* Estilos para la sección de contacto */
+#Contact {
+    background-color: #2C2C2C;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Contenedor de contacto */
+.contact-container {
+    background-color: #2C2C2C;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #E0E0E0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo del título de contacto */
+.contact-title {
+    font-size: 2rem;
+    color: #F05454;
+    margin-bottom: 10px;
+}
+
+/* Estilo de la descripción de contacto */
+.contact-description {
+    font-size: 1.2rem;
+    color: #E0E0E0;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el contenedor de correo electrónico y botón */
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Estilo del correo electrónico */
+.contact-email {
+    font-size: 1.5rem;
+    color: #F05454;
+    text-decoration: none;
+}
+
+.contact-email:hover {
+    text-decoration: underline;
+    color: #E0E0E0;
+}
+
+/* Estilo para el botón de copiar */
+.copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: #F05454;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Estilo para la imagen dentro del botón */
+.copyimg {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+
+#contact-email {
+    text-decoration: none;
+}
+
+#contact-email:hover {
+    text-decoration: none;
+    color: #F05454;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
