@@ -20,7 +20,22 @@
 }
 
 .navbar-toggler {
-    background-color: #E0E0E0;
+    background-color: #F05454; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 8px; 
+    width: 40px; 
+    height: 40px; 
+    background-image: url("../img/menu.png"); 
+    background-size: 24px 24px; 
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none; /* Quitar contorno predeterminado */
+    box-shadow: none; /* Quitar sombra */
 }
 
 .navbar-nav .nav-link {
