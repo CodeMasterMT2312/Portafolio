@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/main.css">
     <title>Mathias Teran</title>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">MathiasT Dev</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -19,30 +21,37 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#Home">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#Home">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#About">About</a>
+                        <a class="nav-link" href="#About">Sobre mi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#Proyects">Proyects</a>
+                        <a class="nav-link" href="#Proyects">Proyectos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#Contact">Contact</a>
+                        <a class="nav-link" href="#Contact">Contacto</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <!-- Buttons for translation -->
+    <div class="translation-buttons">
+        <button id="translate-en" class="btn btn-secondary">Translate to English</button>
+        <button id="translate-es" class="btn btn-secondary">Traducir al Español</button>
+    </div>
+
     <header id="Home">
         <section class="img-Profile">
             <img class="img-profile" src="./assets/img/profileCut.jpeg" alt="profile photo">
         </section>
         <div class="text-profile">
             <section class="">
-                <h2>Hi I'm</h2>
-                <h1 class="">Mathias Teran</h1>
-                <h2>Software Developer</h2>
+                <h2 id="greeting">¡Hola!, soy</h2>
+                <h1 id="name">Mathias Teran</h1>
+                <h2 id="title">Desarrollador de Software</h2>
             </section>
             <section class="social-media">
                 <div class="social-button github">
@@ -52,53 +61,98 @@
                 </div>
                 <div class="social-button linkedin">
                     <a href="https://ec.linkedin.com/in/mathias-teran-236727290">
-                        <img src="./assets/img/linkedin.png" alt="Linkedin">LinkedIn 
+                        <img src="./assets/img/linkedin.png" alt="Linkedin">LinkedIn
                     </a>
                 </div>
                 <div class="social-button cv">
-                    <a href="">
+                    <a href="./assets/PDF/Protafolio.pdf">
                         <img src="./assets/img/cv.png" alt="CV">Curriculum
                     </a>
                 </div>
             </section>
-            
         </div>
     </header>
     <main>
         <section id="About">
-            <h3>About Me</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque quod harum non molestias earum distinctio, officia sapiente exercitationem expedita provident, ipsum perspiciatis? Dicta culpa dolores, voluptatem laboriosam ipsam optio corporis!</p>
-            <h3>Stack</h3>
-            <h5>Front-End</h5>
-            <div>HTML</div>
-            <div>CSS</div>
-            <div>JS</div>
-            <h5>DATABASES</h5>
-            <div>MYSQL</div>
-            <h5>Programming Languages</h5>
-            <div>PYTHON</div>
-            <div>JAVA</div>
-        </section>
-        <section id="Proyects">
-        </section>
-        <section id="Contact">
-            <div>
-                <h2>Contact</h2>
-                <div>
-                    <label for="Name">Name</label><br>
-                    <input type="text" name="Name" required>
-                </div>
-                <div>
-                    <label for="Email">Email</label><br>
-                    <input type="email" name="Email" required>
-                </div>
-                <div>
-                    <label for="Message">Message</label><br>
-                    <textarea id="Message"></textarea>
-                </div>
-                <button>Send</button>
+            <h3 id="about-title">Sobre Mi</h3>
+            <p id="about-text">¡Hola! Soy desarrollador de Software. Aunque tengo poca experiencia en el desarrollo web front-end,
+                disfruto transformando ideas en experiencias interactivas. Estoy aprendiendo .NET y busco
+                oportunidades para seguir creciendo en el campo de la programación y el desarrollo.</p><br>
+            <h3 id="stack-title">Stack</h3><br>
+            <h5 id="front-end-title">Front-End</h5><br>
+            <div class="frontEnd">
+                <img src="./assets/img/html5.png" alt="HTML-5">
+                <img src="./assets/img/css3.png" alt="CSS-3">
+                <img src="./assets/img/js.png" alt="Javascript">
+            </div><br>
+            <h5 id="databases-title">Bases de Datos</h5><br>
+            <div class="BDD">
+                <img src="./assets/img/mysql.png" alt="MYSQL">
+                <img src="./assets/img/mongodb.png" alt="Mongodb">
+            </div><br>
+            <h5 id="programming-languages-title">Lenguajes de Programación</h5><br>
+            <div class="PrograLang">
+                <img src="./assets/img/python.png" alt="Python">
+                <img src="./assets/img/java.png" alt="Java">
+                <img src="./assets/img/cpp.png" alt="C++">
             </div>
         </section>
+        <section id="Proyects">
+            <div class="card-container">
+                <div class="card">
+                    <img src="./assets/img/javaProject1.png" class="card-img-top" alt="Reserva de Cine">
+                    <div class="card-body">
+                        <h5 class="card-title" id="project1-title">Reserva de Cine</h5>
+                        <p class="card-text" id="project1-text">Este proyecto es un sistema de reserva de cine desarrollado en Java, diseñado para optimizar la experiencia de los cinéfilos al gestionar sus reservas de asientos.</p>
+                        <h6 class="card-text techText" id="project1-tech">Tecnologías</h6>
+                        <div class="tech">
+                            <div class="card-text">Java</div>
+                            <div class="card-text">Java form</div>
+                        </div>
+                        <a href="https://github.com/CodeMasterMT2312/Proyecto.git" class="btn btn-primary">Github</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./assets/img/HtmlProject.png" class="card-img-top" alt="Catalogo">
+                    <div class="card-body">
+                        <h5 class="card-title" id="project2-title">Catálogo de Ropa</h5>
+                        <p class="card-text" id="project2-text">Un catálogo de ropa. Permite a los usuarios explorar productos</p>
+                        <h6 class="card-text techText" id="project2-tech">Tecnologías</h6>
+                        <div class="tech">
+                            <div class="card-text">HTML</div>
+                            <div class="card-text">CSS</div>
+                            <div class="card-text">JS</div>
+                            <div class="card-text">React</div>
+                        </div>
+                        <a href="https://github.com/CodeMasterMT2312/ModaCom.git" class="btn btn-primary">Github</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./assets/img/Calculadora.png" class="card-img-top" alt="Calculadora">
+                    <div class="card-body">
+                        <h5 class="card-title" id="project3-title">Calculadora</h5>
+                        <p class="card-text" id="project3-text">Calculadora simple</p>
+                        <h6 class="card-text techText" id="project3-tech">Tecnologías</h6>
+                        <div class="tech">
+                            <div class="card-text">HTML</div>
+                            <div class="card-text">CSS</div>
+                            <div class="card-text">JS</div>
+                        </div>
+                        <a href="https://github.com/CodeMasterMT2312/Calculadora.git" class="btn btn-primary">Github</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Contact">
+            <div class="contact-container">
+                <h2 class="contact-title" id="contact-title">Contacto</h2>
+                <p class="contact-description" id="contact-description">Puedes contactarme a través del siguiente correo electrónico:</p>
+                <div class="contact-info">
+                    <a id="contact-email" class="contact-email">agusmaty.a23@gmail.com</a>
+                    <button id="copy-button" class="copy"><img class="copyimg" src="./assets/img/copiar.png" alt="Copiar"></button>
+                </div>
+            </div>
+        </section>                       
     </main>
     <footer>
         <div>
@@ -106,6 +160,8 @@
             </p>
         </div>
     </footer>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/translate.js"></script>
 </body>
 
 </html>
