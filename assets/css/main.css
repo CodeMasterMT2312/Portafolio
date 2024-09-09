@@ -282,14 +282,14 @@ p, div {
 /* Estilos para el contenedor de las tarjetas */
 .card-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    flex-wrap: nowrap; /* prevent wrapping to a new line */
+    justify-content: center; /* center the cards horizontally */
+    gap: 20px; /* add a gap between cards */
 }
 
 /* Estilos para las tarjetas */
 .card {
-    width: 18rem;
+    flex-basis: 300px; /* initial width of each card */
     background-color: #2C2C2C;
     color: #E0E0E0;
     border: 1px solid #30475E;
@@ -297,7 +297,8 @@ p, div {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    overflow: hidden;
+    min-height: 400px; /* Asegura que todas las tarjetas tengan una altura mínima igual */
 }
 
 /* Estilos para la imagen de la tarjeta */
@@ -313,6 +314,7 @@ p, div {
     padding: 15px;
     display: flex;
     flex-direction: column;
+    flex-grow: 1; /* Permite que el contenido se expanda para llenar el espacio disponible */
 }
 
 /* Estilos para el título de la tarjeta */
@@ -325,17 +327,10 @@ p, div {
 .card-text {
     color: #E0E0E0;
     margin-bottom: 5px;
+    flex-grow: 1; /* Permite que el texto se expanda para llenar el espacio disponible */
 }
 
 /* Estilos para las tecnologías */
-.card-body .card-text {
-    display: inline;
-    margin-right: 10px;
-}
-
-.card-body .card-text:first-child {
-    margin-left: 0;
-}
 .techText {
     font-weight: bold;
     color: #F05454;
@@ -343,12 +338,15 @@ p, div {
 
 .tech {
     display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 /* Estilos para el botón */
 .btn-primary {
     background-color: #F05454;
     border-color: #F05454;
+    margin-top: auto; /* Asegura que el botón esté en la parte inferior de la tarjeta */
 }
 
 .btn-primary:hover {
@@ -358,24 +356,17 @@ p, div {
 
 /* Ajustes responsivos para las tarjetas */
 @media (max-width: 768px) {
-    .card-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .card {
-        width: 100%;
-        max-width: 300px; /* Ajusta el ancho máximo de las tarjetas en pantallas pequeñas */
+        flex-basis: 250px; /* adjust width for smaller screens */
     }
 }
 
-/* Estilos compactos para las tarjetas en dispositivos más pequeños */
 @media (max-width: 480px) {
     .card {
-        width: 100%;
-        max-width: 280px;
+        flex-basis: 200px; /* adjust width for even smaller screens */
     }
 }
+
 
 /* Estilos para la sección de contacto */
 #Contact {
