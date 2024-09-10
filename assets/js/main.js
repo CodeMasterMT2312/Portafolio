@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Obtén el botón y el correo electrónico por su id
     const copyButton = document.getElementById('copy-button');
     const email = document.getElementById('contact-email').textContent;
 
