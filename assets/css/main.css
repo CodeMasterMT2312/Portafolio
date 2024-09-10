@@ -282,14 +282,14 @@ p, div {
 /* Estilos para el contenedor de las tarjetas */
 .card-container {
     display: flex;
-    flex-wrap: nowrap; /* prevent wrapping to a new line */
+    flex-wrap: wrap;
     justify-content: center; /* center the cards horizontally */
     gap: 20px; /* add a gap between cards */
 }
 
 /* Estilos para las tarjetas */
 .card {
-    flex-basis: 300px; /* initial width of each card */
+    flex: 1 1 300px; /* Permite que las tarjetas se ajusten con un ancho base de 300px */
     background-color: #2C2C2C;
     color: #E0E0E0;
     border: 1px solid #30475E;
@@ -298,9 +298,8 @@ p, div {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    min-height: 400px; /* Asegura que todas las tarjetas tengan una altura mínima igual */
+    min-height: 400px;
 }
-
 /* Estilos para la imagen de la tarjeta */
 .card-img-top {
     border-top-left-radius: 10px;
@@ -314,7 +313,7 @@ p, div {
     padding: 15px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Permite que el contenido se expanda para llenar el espacio disponible */
+    flex-grow: 1; 
 }
 
 /* Estilos para el título de la tarjeta */
@@ -327,7 +326,7 @@ p, div {
 .card-text {
     color: #E0E0E0;
     margin-bottom: 5px;
-    flex-grow: 1; /* Permite que el texto se expanda para llenar el espacio disponible */
+    flex-grow: 1;
 }
 
 /* Estilos para las tecnologías */
@@ -346,7 +345,7 @@ p, div {
 .btn-primary {
     background-color: #F05454;
     border-color: #F05454;
-    margin-top: auto; /* Asegura que el botón esté en la parte inferior de la tarjeta */
+    margin-top: auto; 
 }
 
 .btn-primary:hover {
@@ -355,15 +354,25 @@ p, div {
 }
 
 /* Ajustes responsivos para las tarjetas */
-@media (max-width: 768px) {
+
+/* Estilos para pantallas grandes */
+@media (min-width: 769px) {
     .card {
-        flex-basis: 250px; /* adjust width for smaller screens */
+        flex: 1 1 300px; /* Base de 300px para cada tarjeta */
     }
 }
 
+/* Estilos para pantallas medianas */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* 2 tarjetas por línea con espacio entre ellas */
+    }
+}
+
+/* Estilos para pantallas pequeñas */
 @media (max-width: 480px) {
     .card {
-        flex-basis: 200px; /* adjust width for even smaller screens */
+        flex: 1 1 calc(100% - 20px); /* 1 tarjeta por línea con espacio entre ellas */
     }
 }
 
@@ -399,7 +408,8 @@ p, div {
 }
 
 .contact-email:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: #F05454;
 }
 
 .copy {
